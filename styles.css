@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  /* Primary */
+  --brightOrange: hsl(31, 77%, 52%);
+  --darkCyan: hsl(184, 100%, 22%);
+  --veryDarkCyan: hsl(179, 100%, 13%);
+  /* Neutral */
+
+  /* paragraphs */
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+
+  /* background, headings, buttons */
+  --veryLightGray: hsl(0, 0%, 95%);
+}
+
+main {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  background-color: var(--veryLightGray);
+  font-family: "Lexend Deca", "sans-serif";
+}
+
+.card {
+  display: flex;
+  max-width: 1200px;
+  border-radius: 20px;
+  margin: 2em 2em;
+}
+
+.sedan-container {
+  background-color: var(--brightOrange);
+  border-radius: 10px 0 0 10px;
+}
+.suv-container {
+  background-color: var(--darkCyan);
+}
+.luxury-container {
+  background-color: var(--veryDarkCyan);
+  border-radius: 0 10px 10px 0;
+}
+.sedan-container,
+.luxury-container,
+.suv-container {
+  padding: 50px;
+}
+h1 {
+  font-size: 2.5em;
+  font-weight: 700;
+  color: var(--veryLightGray);
+  font-family: "Big Shoulders Display";
+  padding: 30px 0;
+}
+h2 {
+  font-size: 1em;
+  font-weight: 400;
+  color: var(--transparent-white);
+  padding: 15px 30% 15px 0;
+}
+
+p {
+  background-color: var(--veryLightGray);
+  padding: 10px 15px;
+  text-align: center;
+  border-radius: 20px;
+  max-width: 50%;
+  margin-top: 60px;
+  font-weight: 700;
+  font-size: 1em;
+}
+
+.sedan-container > p {
+  color: var(--brightOrange);
+}
+
+.suv-container > p {
+  color: var(--darkCyan);
+}
+.luxury-container > p {
+  color: var(--veryDarkCyan);
+}
+p:hover {
+  color: var(--veryLightGray);
+  border: 1px solid var(--veryLightGray);
+  padding: 9px 14px;
+  cursor: pointer;
+}
+
+.sedan-container > p:hover {
+  background-color: var(--brightOrange);
+}
+.suv-container > p:hover {
+  background-color: var(--darkCyan);
+}
+.luxury-container > p:hover {
+  background-color: var(--veryDarkCyan);
+}
+
+@media only screen and (max-width: 600px) {
+  .card {
+    flex-direction: column;
+  }
+  .sedan-container {
+    border-radius: 10px 10px 0 0;
+  }
+  .luxury-container {
+    border-radius: 0 0 10px 10px;
+  }
+}
